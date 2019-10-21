@@ -1,11 +1,85 @@
 ---
-title: "Home"
+title: "Percy's Assignment"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
     toc: false
 editor_options:
-  chunk_output_type: console
+  chunk_output_type: c('both')
 ---
 
-Welcome to my research website.
+Welcome to my assignment.
+
+```{r}
+d <- read.csv("data/homes.csv")
+data <- d[1:50,]
+```
+This is the dataset which shows home sale statistics. It contains 50 home sales, with selling price, asking price, living space, rooms, bedrooms, bathrooms, age, acreage, taxes.
+
+We show descriptive statistics of the selling prices and living spaces as below:
+```{r}
+summary(data[,c(1,3)])
+```
+
+Now we add plots of distribution (histogram) of selling price and living space.
+```{r}
+hist(data$Sell, xlab = "Selling Price", main = "Distribution of Selling Price")
+hist(data$Living, xlab = "Living Space", main = "Distribution of Living Space")
+```
+
+Now we add scatter plot between selling price and living space.
+```{r}
+plot(data$Living, data$Sell, type="p", main = "Scatter plot btw selling price and living space", ylab = "Selling Price", xlab = "Living Space")
+```
+
+Now we run a simple linear regression and output its summary:
+```{r}
+lmodel <- lm(Sell~Living, data)
+summary(lmodel)
+```
+We can see that Selling Price is positively correlated to Living Space. The linear regression shows that the slope of price to space relationship is `r lmodel$coefficients[2]`. i.e. Every time living space increases by 1, the selling price tends to increase by `r lmodel$coefficients[2]`.
+
+---
+title: "Percy's Assignment"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: c('both')
+---
+
+Welcome to my assignment.
+
+```{r}
+d <- read.csv("data/homes.csv")
+data <- d[1:50,]
+```
+This is the dataset which shows home sale statistics. It contains 50 home sales, with selling price, asking price, living space, rooms, bedrooms, bathrooms, age, acreage, taxes.
+
+We show descriptive statistics of the selling prices and living spaces as below:
+```{r}
+summary(data[,c(1,3)])
+```
+
+Now we add plots of distribution (histogram) of selling price and living space.
+```{r}
+hist(data$Sell, xlab = "Selling Price", main = "Distribution of Selling Price")
+hist(data$Living, xlab = "Living Space", main = "Distribution of Living Space")
+```
+
+Now we add scatter plot between selling price and living space.
+```{r}
+plot(data$Living, data$Sell, type="p", main = "Scatter plot btw selling price and living space", ylab = "Selling Price", xlab = "Living Space")
+```
+
+Now we run a simple linear regression and output its summary:
+```{r}
+lmodel <- lm(Sell~Living, data)
+summary(lmodel)
+```
+We can see that Selling Price is positively correlated to Living Space. The linear regression shows that the slope of price to space relationship is `r lmodel$coefficients[2]`. i.e. Every time living space increases by 1, the selling price tends to increase by `r lmodel$coefficients[2]`.
+
+Now we will publish the site.
+This time we will.
+
