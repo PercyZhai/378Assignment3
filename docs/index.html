@@ -415,10 +415,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong688c854"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> 688c854 </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong88b1c5a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> 88b1c5a </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong688c854" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrong88b1c5a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -428,7 +428,6 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    data/.DS_Store
-    Ignored:    docs/figure/
 
 </code></pre>
 <p>
@@ -467,6 +466,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+88b1c5a
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+<td>
+Analyze housing price again
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+edb5634
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -524,11 +557,122 @@ data &lt;- d[1:50,]</code></pre>
 <p>Now we add plots of distribution (histogram) of selling price and living space.</p>
 <pre class="r"><code>hist(data$Sell, xlab = &quot;Selling Price&quot;, main = &quot;Distribution of Selling Price&quot;)</code></pre>
 <p><img src="figure/index.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
+Past versions of unnamed-chunk-3-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+edb5634
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>hist(data$Living, xlab = &quot;Living Space&quot;, main = &quot;Distribution of Living Space&quot;)</code></pre>
 <p><img src="figure/index.Rmd/unnamed-chunk-3-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-2">
+Past versions of unnamed-chunk-3-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+edb5634
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Now we add scatter plot between selling price and living space.</p>
 <pre class="r"><code>plot(data$Living, data$Sell, type=&quot;p&quot;, main = &quot;Scatter plot btw selling price and living space&quot;, ylab = &quot;Selling Price&quot;, xlab = &quot;Living Space&quot;)</code></pre>
 <p><img src="figure/index.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-4-1">
+Past versions of unnamed-chunk-4-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-4-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+edb5634
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Now we run a simple linear regression and output its summary:</p>
 <pre class="r"><code>lmodel &lt;- lm(Sell~Living, data)
 summary(lmodel)</code></pre>
@@ -567,11 +711,122 @@ data &lt;- d[1:50,]</code></pre>
 <p>Now we add plots of distribution (histogram) of selling price and living space.</p>
 <pre class="r"><code>hist(data$Sell, xlab = &quot;Selling Price&quot;, main = &quot;Distribution of Selling Price&quot;)</code></pre>
 <p><img src="figure/index.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-1">
+Past versions of unnamed-chunk-8-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+edb5634
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>hist(data$Living, xlab = &quot;Living Space&quot;, main = &quot;Distribution of Living Space&quot;)</code></pre>
 <p><img src="figure/index.Rmd/unnamed-chunk-8-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-2">
+Past versions of unnamed-chunk-8-2.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-8-2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+edb5634
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Now we add scatter plot between selling price and living space.</p>
 <pre class="r"><code>plot(data$Living, data$Sell, type=&quot;p&quot;, main = &quot;Scatter plot btw selling price and living space&quot;, ylab = &quot;Selling Price&quot;, xlab = &quot;Living Space&quot;)</code></pre>
 <p><img src="figure/index.Rmd/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-9-1">
+Past versions of unnamed-chunk-9-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-9-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+edb5634
+</td>
+<td>
+PercyZhai
+</td>
+<td>
+2019-10-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Now we run a simple linear regression and output its summary:</p>
 <pre class="r"><code>lmodel &lt;- lm(Sell~Living, data)
 summary(lmodel)</code></pre>
@@ -594,7 +849,7 @@ Residual standard error: 35 on 48 degrees of freedom
 Multiple R-squared:  0.7733,    Adjusted R-squared:  0.7686 
 F-statistic: 163.7 on 1 and 48 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>We can see that Selling Price is positively correlated to Living Space. The linear regression shows that the slope of price to space relationship is 7.6613096. i.e. Every time living space increases by 1, the selling price tends to increase by 7.6613096.</p>
-<p>Now we will publish the site. This time we will.</p>
+<p>Now we will publish the site. This time we will. aaaa</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
